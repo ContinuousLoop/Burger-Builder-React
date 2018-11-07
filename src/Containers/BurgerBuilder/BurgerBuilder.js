@@ -87,8 +87,8 @@ class BurgerBuilder extends Component {
         this.setState({
             showOrder: false
         })
-        console.log(this.state.showOrder);
     }
+
 
 
     render (){
@@ -107,6 +107,8 @@ class BurgerBuilder extends Component {
             >
                 <OrderSummary 
                 ingredients = {this.state.ingredients}
+                cancel = {this.quitSummaryHandler}
+                price = {this.state.totalPrice}
                 />
             </Modal>
             <Burger

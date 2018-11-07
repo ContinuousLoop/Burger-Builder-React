@@ -22,7 +22,7 @@ const burgerControls = (props) => {
 
     let controlItems = 
     <div className = {classes.BuildControls}>
-    <p>{props.totalPrice}</p>
+    <p>{props.totalPrice.toFixed(2)}</p>
     {controls.map(control => {
         return (<BurgerControl 
             key={control.Label} 

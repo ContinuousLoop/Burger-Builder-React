@@ -6,12 +6,12 @@ return (
     <div className = {classes.BuildControl}>
     <div className = {classes.Label}>{props.label}</div>
     <button 
-    className = {classes.Less}
+    className = {classes.More}
     onClick = {props.addIngr}
     >More</button>
     <button 
     disabled = {props.disabled}
-    className = {classes.More}
+    className = {classes.Less}
     onClick = {props.removeIngr}
     >Less</button>
   </div>

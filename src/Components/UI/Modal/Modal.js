@@ -4,16 +4,16 @@ import Backdrop from '../../UI/Backdrop/Backdrop'
 import Aux from '../../../HOC/Auxl'
 
 const Modal = (props) => {
-    return <Aux>
-        <Backdrop 
-        show = {props.show}
-        escape={props.escape}/>
-
-        <div className={classes.Modal} style={{ opacity: props.show ? "1" : "0" }}>
-          {props.children}
-        </div>
-        
-      </Aux>;
-}
+  
+    let showModal = 
+    <div className={classes.Modal}>
+        {props.children}
+    </div>
+            return(
+            <Aux>
+                <Backdrop show={props.show} escape={props.escape}/>
+                {props.show ? showModal : null }
+            </Aux>
+            )}
 
 export default Modal
